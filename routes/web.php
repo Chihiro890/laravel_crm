@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/crms/search/', [App\Http\Controllers\CrmController::class, 'search']);
+
+Route::resource('crms', App\Http\Controllers\CrmController::class);
